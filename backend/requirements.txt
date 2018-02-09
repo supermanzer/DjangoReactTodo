@@ -1,0 +1,10 @@
+##########################################################################
+# Requirements.txt - defining python modules that will be installed in our
+#                               backend docker container.
+##########################################################################
+
+django>=2.0.0
+djangorestframework
+markdown
+django-filter
+django-cors-headers

@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+  web:
+    build: ./backend
+    command: python3 manage.py runserver 0.0.0.0:8976
+    volumes:
+      - ./backend:/code
+    ports:
+      - "8976:8976"
