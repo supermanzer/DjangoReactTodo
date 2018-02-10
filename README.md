@@ -1,5 +1,6 @@
 # DjangoReact - Todo
----
+
+
 This project is my first attempt at building out a full stack application
 utilizing the React front-end framework as well as the Django Rest
 Framework.  Previous work with the Django web framework has
