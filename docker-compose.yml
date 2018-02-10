@@ -1,10 +1,19 @@
 version: '3.1'
 
 services:
-  web:
-    build: ./backend
-    command: python3 manage.py runserver 0.0.0.0:8976
-    volumes:
-      - ./backend:/code
-    ports:
-      - "8976:8976"
+          web:
+                    build: ./backend
+                    command: python3 manage.py runserver 0.0.0.0:8976
+                    volumes:
+                              - ./backend:/code
+                    ports:
+                              - "8976:8976"
+          app:
+                    build: ./frontend
+                    volumes:
+                              - './frontend:/usr/src/todo'
+                    ports:
+                              - "3000:3000"
+                    environment:
+                              - NODE_ENV=development
+                              - CHOKIDAR_USEPOLLING=true
